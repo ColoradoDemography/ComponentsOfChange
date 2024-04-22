@@ -23,7 +23,8 @@ module.exports = function(map: Object, layer: Object, worker_data: any) {
     command.onAdd = function() {
         var div = L.DomUtil.create('div', 'command bord');
         div.innerHTML = "Statistic:<br /><select id='stat'><option value='2'>Total Population Change</option><option value='1'>Percent Population Change</option><option value='4'>Avg Population Change</option><option value='3'>Avg Pct Population Change</option><option value='5'>Birth Rate</option><option value='6'>Death Rate</option><option value='7'>Rate of Natural Increase</option><option value='8'>Migration Rate</option><option value='9'>Total Births</option><option value='10'>Total Deaths</option><option value='11'>Total Natural Increase</option><option value='12'>Total Migration</option></select><br />" +
-            "<br />From:&nbsp;&nbsp;<select id='selfrom'>" + queriedYears + "</select>&nbsp;&nbsp;&nbsp;To:&nbsp;&nbsp;<select id='selto'>" + queriedYears + "</select>";
+            "<br />From:&nbsp;&nbsp;<select id='selfrom'>" + queriedYears + "</select>&nbsp;&nbsp;&nbsp;To:&nbsp;&nbsp;<select id='selto'>" + queriedYears + "</select><br />"+
+            "<p><a href=https://storage.googleapis.com/co-publicdata/components-change-county.csv>Download the components of change data</a></p>";
         div.padding = "20px";
         return div;
     };
